@@ -2696,19 +2696,14 @@ p {
 }
 
 
-/* ============================================================
-   АДАПТИВ
-   ============================================================ */
+/* адаптив: планшеты */
 
-
-/* Планшеты и узкие ноутбуки */
 @media (max-width: 1024px) {
     .site-header__nav { display: none; }
     .burger           { display: flex; }
     .site-header__logo-text { font-size: 0.875rem; }
 }
 
-/* Планшеты вертикально */
 @media (max-width: 960px) {
     .quiz { padding: 40px 20px 20px; }
 
@@ -2775,7 +2770,9 @@ p {
     .site-decor__star--8 { font-size: 1rem; }
 }
 
-/* Телефоны */
+
+/* адаптив: телефоны */
+
 @media (max-width: 640px) {
     .site-header__inner { padding: 0 16px; gap: 12px; }
     .site-header__logo { max-width: 140px; }
@@ -2893,12 +2890,9 @@ p {
     .site-footer__logo { font-size: 1.125rem; }
     .site-footer__bottom { flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 24px; }
 
-    /* ==== МОДАЛКА ЗАПИСИ ==== */
+    /* ===== МОДАЛКА ЗАПИСИ ===== */
 
-    .booking {
-        padding: 0;
-        align-items: flex-end;
-    }
+    .booking { padding: 0; align-items: flex-end; }
 
     .booking__dialog {
         width: 100%;
@@ -2916,8 +2910,6 @@ p {
     .booking__title {
         font-size: 1.125rem;
         line-height: 1.2;
-        word-break: break-word;
-        overflow-wrap: anywhere;
         padding-right: 44px;
     }
 
@@ -2962,9 +2954,7 @@ p {
         line-height: 1;
     }
 
-    .booking__day__status {
-        display: none;
-    }
+    .booking__day__status { display: none; }
 
     .booking__calendar-empty {
         min-width: 0;
@@ -2977,16 +2967,8 @@ p {
         margin-top: 8px;
     }
 
-    .booking__legend-item {
-        font-size: 0.5625rem;
-        gap: 4px;
-    }
-
-    .booking__legend-swatch {
-        width: 11px;
-        height: 11px;
-        border-radius: 3px;
-    }
+    .booking__legend-item { font-size: 0.5625rem; gap: 4px; }
+    .booking__legend-swatch { width: 11px; height: 11px; border-radius: 3px; }
 
     .booking__slots {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3004,11 +2986,9 @@ p {
         padding: 13px 14px;
     }
 
-    .booking__submit {
-        width: 100%;
-    }
+    .booking__submit { width: 100%; }
 
-    /* ==== КОНЕЦ МОДАЛКИ ==== */
+    /* ===== КОНЕЦ МОДАЛКИ ===== */
 
     .promo-fab {
         right: 16px;
@@ -3017,10 +2997,7 @@ p {
         height: 56px;
     }
 
-    .promo-fab__icon {
-        width: 26px;
-        height: 26px;
-    }
+    .promo-fab__icon { width: 26px; height: 26px; }
 
     .promo { padding: 16px; }
     .promo__dialog { padding: 28px 18px 22px; border-radius: 22px; }
@@ -3060,10 +3037,7 @@ p {
         height: 46px;
     }
 
-    .to-top svg {
-        width: 20px;
-        height: 20px;
-    }
+    .to-top svg { width: 20px; height: 20px; }
 
     body::before { width: 280px; height: 280px; top: -40px; right: -80px; }
     body::after  { width: 300px; height: 300px; bottom: 20px; left: -80px; }
