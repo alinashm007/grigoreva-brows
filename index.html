@@ -1,0 +1,846 @@
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grigoreva Brows — студия бровиста</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+ <!-- фон (звезды и круги) -->
+   
+<div class="site-decor" aria-hidden="true">
+    <span class="site-decor__star site-decor__star--1">✦</span>
+    <span class="site-decor__star site-decor__star--2">✦</span>
+    <span class="site-decor__star site-decor__star--3">✦</span>
+    <span class="site-decor__star site-decor__star--4">✦</span>
+    <span class="site-decor__star site-decor__star--5">✦</span>
+    <span class="site-decor__star site-decor__star--6">✦</span>
+    <span class="site-decor__star site-decor__star--7">✦</span>
+    <span class="site-decor__star site-decor__star--8">✦</span>
+</div>
+
+
+<!-- шапка -->
+<header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+
+        <div class="site-header__logo">
+            <span class="site-header__logo-text">GRIGOREVA BROWS</span>
+        </div>
+
+        <nav class="site-header__nav" aria-label="Основная навигация">
+            <ul class="site-header__menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#prices">Цены</a></li>
+                <li><a href="#education">Обучение</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="site-header__actions">
+            <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- кратко (блоки) -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="closeBtn" aria-label="Закрыть меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+    </button>
+
+    <nav class="mobile-menu__nav">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#prices">Цены</a></li>
+            <li><a href="#education">Обучение</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+
+<main>
+
+    <!-- блок знакомства -->
+    <section id="home" class="hero">
+        <div class="hero__inner">
+
+            <div class="hero__content">
+
+                <div class="hero__card">
+                    <span class="hero__card-label">Прийдешь один раз - останешься навсегда</span>
+                    <strong class="hero__card-title">Твои брови и ресницы - моя забота</strong>
+                    <span class="hero__card-sub">Студия бровиста и лэшмейкера · Диана Григорьева</span>
+                </div>
+
+                <span class="hero__badge">Студия бровиста</span>
+
+                <h1 class="hero__title">Мастер<br>Диана Григорьева</h1>
+
+                <p class="hero__text">
+                    Коррекция, окрашивание, ламинирование бровей.
+                    Работаю с любовью к деталям и подбираю форму под ваш тип лица.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#services" class="btn btn--ghost">Услуги</a>
+                </div>
+
+                <ul class="hero__facts">
+                    <li><strong>5+</strong> лет опыта</li>
+                    <li><strong>800+</strong> довольных клиентов</li>
+                    <li><strong>100%</strong> стерильность</li>
+                </ul>
+            </div>
+
+            <div class="hero__media">
+                <div class="hero__circle" aria-hidden="true"></div>
+
+                <div class="hero__photo">
+                    <img src="images/master.jpeg" alt="Мастер Диана Григорьева" loading="eager">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+  <!-- услуги -->
+    <section id="services" class="services">
+        <div class="services__inner">
+
+            <div class="services__head">
+                <h2 class="services__title">Услуги</h2>
+                <p class="services__sub">Красота в деталях — от формы до цвета</p>
+            </div>
+
+            <div class="slider" id="servicesSlider">
+
+                <div class="slider__slide is-active">
+                    <img src="images/3.png" alt="Ламинирование бровей">
+                    <div class="slider__caption">
+                        <h3>Ламинирование бровей</h3>
+                        <p>Долговременная укладка волосков, придающая объём и форму</p>
+                    </div>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="images/8.png" alt="Коррекция бровей">
+                    <div class="slider__caption">
+                        <h3>Коррекция бровей</h3>
+                        <p>Идеальная форма под ваш тип лица</p>
+                    </div>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="images/5.png" alt="Окрашивание бровей">
+                    <div class="slider__caption">
+                        <h3>Окрашивание бровей</h3>
+                        <p>Хна, краска или оттеночный уход — на выбор</p>
+                    </div>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="images/7.png" alt="Окрашивание и ламинирование ресниц">
+                    <div class="slider__caption">
+                        <h3>Окрашивание и ламинирование ресниц</h3>
+                        <p>Придать ресницам насыщенный цвет и поднять завиток ресниц</p>
+                    </div>
+                </div>
+
+                <button class="slider__arrow slider__arrow--prev" id="sliderPrev" aria-label="Назад">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button class="slider__arrow slider__arrow--next" id="sliderNext" aria-label="Вперёд">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="slider__dots" id="sliderDots"></div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+  <!-- прайс -->
+    <section id="prices" class="prices">
+        <div class="prices__inner">
+
+            <div class="prices__head">
+                <span class="prices__label">Прайс-лист · 2026</span>
+                <h2 class="prices__title">
+                    <span>Цены</span>
+                    <em>на услуги</em>
+                </h2>
+                <p class="prices__sub">Все процедуры — с любовью к деталям</p>
+            </div>
+
+            <ul class="prices__list">
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Коррекция бровей</span>
+                        <span class="price-row__desc">Форма под ваш тип лица</span>
+                    </span>
+                    <span class="price-row__price">1000 ₽</span>
+                </li>
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Окрашивание + коррекция бровей</span>
+                        <span class="price-row__desc">Хна или краска — на выбор</span>
+                    </span>
+                    <span class="price-row__price">1 800 ₽</span>
+                </li>
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Коррекция + окрашивание + ламинирование бровей</span>
+                        <span class="price-row__desc">Комплекс: форма и цвет</span>
+                    </span>
+                    <span class="price-row__price">2 300 ₽</span>
+                </li>
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Окрашивание и ламинирование ресниц</span>
+                        <span class="price-row__desc">Придать ресницам насыщенный цвет и завиток</span>
+                    </span>
+                    <span class="price-row__price">2 300 ₽</span>
+                </li>
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Комплекс 1: брови + ресницы</span>
+                        <span class="price-row__desc">Окрашивание + коррекция бровей и ламинирование ресниц</span>
+                    </span>
+                    <span class="price-row__price">3 500 ₽</span>
+                </li>
+
+                <li class="price-row">
+                    <span class="price-row__dot" aria-hidden="true"></span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Комплекс 2: Коррекция + окрашивание + ламинирование бровей и ламинирование ресниц</span>
+                        <span class="price-row__desc">Завиток и питание ресниц</span>
+                    </span>
+                    <span class="price-row__price">3 900 ₽</span>
+                </li>
+
+                <li class="price-row price-row--hit">
+                    <span class="price-row__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3 L14 9 L20 9 L15 13 L17 19 L12 15 L7 19 L9 13 L4 9 L10 9 Z"/>
+                        </svg>
+                    </span>
+                    <span class="price-row__body">
+                        <span class="price-row__name">Комплекс: брови + ресницы</span>
+                        <span class="price-row__desc">На первое посещение</span>
+                    </span>
+                    <span class="price-row__price">3 000 ₽</span>
+                    <span class="price-row__badge">Хит</span>
+                </li>
+
+            </ul>
+
+            <div class="prices__footer">
+                <button type="button" class="btn btn--accent prices__btn" data-open-booking>Записаться</button>
+                <span class="prices__note">Стерильный инструмент · Индивидуальный подход</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- тест -->
+    <section class="quiz" id="quiz">
+        <div class="quiz__inner">
+
+            <!-- ЛЕВАЯ ЧАСТЬ: инфо-подпись -->
+            <div class="quiz__side">
+                <span class="quiz__side-label">✦ Подбор за 30 секунд</span>
+                <h2 class="quiz__side-title">Не знаешь,<br>что тебе<br>подойдёт?</h2>
+                <p class="quiz__side-text">
+                    Ответь на 4 вопроса — подберу процедуру под твой тип лица,
+                    привычки и бюджет. Без навязывания.
+                </p>
+                <div class="quiz__side-decor" aria-hidden="true">✦</div>
+            </div>
+
+            <!-- ПРАВАЯ ЧАСТЬ: сам квиз -->
+            <div class="quiz__box" id="quizBox">
+
+                <!-- Прогресс -->
+                <div class="quiz__progress" aria-hidden="true">
+                    <div class="quiz__progress-bar" id="quizProgressBar"></div>
+                </div>
+
+                <!-- Шаг 1 -->
+                <div class="quiz__step is-active" data-step="0">
+                    <span class="quiz__step-num">Вопрос 1 / 4</span>
+                    <h3 class="quiz__question">Какой у тебя тип лица?</h3>
+
+                    <div class="quiz__options">
+                        <button type="button" class="quiz__option" data-answer="oval">
+                            <span class="quiz__option-icon">◯</span>
+                            <span class="quiz__option-text">Овал — универсальный</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="round">
+                            <span class="quiz__option-icon">◉</span>
+                            <span class="quiz__option-text">Круглое</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="square">
+                            <span class="quiz__option-icon">▢</span>
+                            <span class="quiz__option-text">Квадратное / угловатое</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="heart">
+                            <span class="quiz__option-icon">♡</span>
+                            <span class="quiz__option-text">Сердце / треугольник</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Шаг 2 -->
+                <div class="quiz__step" data-step="1">
+                    <span class="quiz__step-num">Вопрос 2 / 4</span>
+                    <h3 class="quiz__question">Как часто красишь брови?</h3>
+
+                    <div class="quiz__options">
+                        <button type="button" class="quiz__option" data-answer="never">
+                            <span class="quiz__option-icon">✦</span>
+                            <span class="quiz__option-text">Никогда / только коррекция</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="month">
+                            <span class="quiz__option-icon">✧</span>
+                            <span class="quiz__option-text">Раз в месяц</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="two-weeks">
+                            <span class="quiz__option-icon">❋</span>
+                            <span class="quiz__option-text">Раз в 2 недели</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="often">
+                            <span class="quiz__option-icon">✺</span>
+                            <span class="quiz__option-text">Постоянно, дома сама</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Шаг 3 -->
+                <div class="quiz__step" data-step="2">
+                    <span class="quiz__step-num">Вопрос 3 / 4</span>
+                    <h3 class="quiz__question">Что для тебя важнее?</h3>
+
+                    <div class="quiz__options">
+                        <button type="button" class="quiz__option" data-answer="natural">
+                            <span class="quiz__option-icon">✿</span>
+                            <span class="quiz__option-text">Естественность</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="bright">
+                            <span class="quiz__option-icon">✷</span>
+                            <span class="quiz__option-text">Яркость и выразительность</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="durable">
+                            <span class="quiz__option-icon">✶</span>
+                            <span class="quiz__option-text">Стойкость — чтобы долго</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="care">
+                            <span class="quiz__option-icon">❀</span>
+                            <span class="quiz__option-text">Уход и восстановление</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Шаг 4 -->
+                <div class="quiz__step" data-step="3">
+                    <span class="quiz__step-num">Вопрос 4 / 4</span>
+                    <h3 class="quiz__question">На какой бюджет ориентируешься?</h3>
+
+                    <div class="quiz__options">
+                        <button type="button" class="quiz__option" data-answer="low">
+                            <span class="quiz__option-icon">₽</span>
+                            <span class="quiz__option-text">До 1 500 ₽</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="mid">
+                            <span class="quiz__option-icon">₽₽</span>
+                            <span class="quiz__option-text">1 500 – 2 500 ₽</span>
+                        </button>
+                        <button type="button" class="quiz__option" data-answer="high">
+                            <span class="quiz__option-icon">₽₽₽</span>
+                            <span class="quiz__option-text">2 500 ₽ и больше</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Результат -->
+                <div class="quiz__step quiz__step--result" data-step="result">
+                    <span class="quiz__result-label">✦ Рекомендация готова</span>
+                    <h3 class="quiz__result-title" id="quizResultTitle">—</h3>
+                    <p class="quiz__result-desc" id="quizResultDesc">—</p>
+
+                    <ul class="quiz__result-list" id="quizResultList"></ul>
+
+                    <div class="quiz__result-footer">
+                        <div class="quiz__result-price">
+                            <span class="quiz__result-price-label">Стоимость</span>
+                            <span class="quiz__result-price-value" id="quizResultPrice">— ₽</span>
+                        </div>
+                        <button type="button" class="btn btn--accent" id="quizBookBtn">
+                            Записаться
+                        </button>
+                    </div>
+
+                    <button type="button" class="quiz__restart" id="quizRestart">
+                        ↺ Пройти заново
+                    </button>
+                </div>
+
+                <!-- Кнопка «назад» -->
+                <button type="button" class="quiz__back" id="quizBack" hidden>
+                    ← Назад
+                </button>
+
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- обучение -->
+    <section id="education" class="education">
+        <div class="education__inner">
+
+            <div class="education__head">
+                <span class="education__label">Обучение · курсы</span>
+                <h2 class="education__title">Обучение мастеров</h2>
+                <p class="education__sub">С нуля до уверенного мастера — с личным наставничеством</p>
+            </div>
+
+            <ul class="education__list">
+
+                <li class="edu-item">
+                    <div class="edu-item__media">
+                        <img src="images/9.jpeg" alt="Базовый курс бровиста">
+                        <span class="edu-item__num">01</span>
+                    </div>
+
+                    <div class="edu-item__body">
+                        <h3 class="edu-item__name">Базовый курс «Бровист с нуля»</h3>
+                        <p class="edu-item__desc">
+                            Теория + отработка на моделях. Форма, коррекция, окрашивание,
+                            ламинирование и уход.
+                        </p>
+
+                        <ul class="edu-item__list">
+                            <li>2 дня обучения</li>
+                            <li>Отработка на 3 моделях</li>
+                            <li>Методичка + сертификат</li>
+                        </ul>
+
+                        <div class="edu-item__footer">
+                            <div class="edu-item__price">35 000 ₽</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="edu-item">
+                    <div class="edu-item__media">
+                        <img src="images/10.jpeg" alt="Курс по ламинированию">
+                        <span class="edu-item__num">02</span>
+                    </div>
+
+                    <div class="edu-item__body">
+                        <h3 class="edu-item__name">Курс «Ламинирование + окрашивание»</h3>
+                        <p class="edu-item__desc">
+                            Продвинутая техника: глубокое ламинирование, работа с хной
+                            и краской, уход после процедуры.
+                        </p>
+
+                        <ul class="edu-item__list">
+                            <li>1 день интенсива</li>
+                            <li>Отработка на 2 моделях</li>
+                            <li>Разбор ошибок + сертификат</li>
+                        </ul>
+
+                        <div class="edu-item__footer">
+                            <div class="edu-item__price">25 000 ₽</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="edu-item edu-item--sale">
+                    <div class="edu-item__media">
+                        <img src="images/11.jpeg" alt="Полный курс бровиста + лэшмейкера">
+                        <span class="edu-item__num">03</span>
+                        <span class="edu-item__badge">Скидка −40%</span>
+                    </div>
+
+                    <div class="edu-item__body">
+                        <h3 class="edu-item__name">Полный курс «Бровист + Лэшмейкер»</h3>
+                        <p class="edu-item__desc">
+                            Два направления в одном: брови и ресницы. Все техники,
+                            материалы и старт в профессии.
+                        </p>
+
+                        <ul class="edu-item__list">
+                            <li>3 дня обучения</li>
+                            <li>Отработка на 5 моделях</li>
+                            <li>Пакет материалов в подарок</li>
+                        </ul>
+
+                        <div class="edu-item__footer">
+                            <div class="edu-item__prices">
+                                <span class="edu-item__price-old">75 000 ₽</span>
+                                <span class="edu-item__price edu-item__price--new">45 000 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+
+
+    <!-- как связаться и тд -->
+    <section id="contacts" class="contacts">
+        <div class="contacts__inner">
+
+            <div class="contacts__head">
+                <span class="contacts__label">Связаться со мной</span>
+                <h2 class="contacts__title">Контакты</h2>
+                <p class="contacts__sub">Отвечаю в мессенджерах быстро — выбери удобный способ</p>
+            </div>
+
+            <div class="contacts__messengers">
+
+                <a href="https://t.me/dishhpro" class="contact-card contact-card--tg" target="_blank" rel="noopener">
+                    <span class="contact-card__icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M21.94 5.34a1.5 1.5 0 0 0-1.52-.21l-17.5 7a1.5 1.5 0 0 0 .09 2.79l4.36 1.4 1.64 5.4a1.5 1.5 0 0 0 2.47.63l2.4-2.17 4.07 3a1.5 1.5 0 0 0 2.34-.92l2.14-15.4a1.5 1.5 0 0 0-.49-1.52ZM9.9 13.7 18.6 8.6l-6.94 6.94a1.5 1.5 0 0 0-.42.87l-.32 2.4-1.02-3.35-.1-.36-.7-.25-3.3-1.06 14.1-5.64-.36 2.6-6.86 5.95Z"/>
+                        </svg>
+                    </span>
+                    <span class="contact-card__body">
+                        <span class="contact-card__name">Telegram</span>
+                        <span class="contact-card__value">@dishhpro</span>
+                    </span>
+                    <span class="contact-card__arrow">→</span>
+                </a>
+
+                <a href="https://www.instagram.com/grigoreva.brows" class="contact-card contact-card--ig" target="_blank" rel="noopener">
+                    <span class="contact-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+                            <circle cx="12" cy="12" r="4.2"/>
+                            <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </span>
+                    <span class="contact-card__body">
+                        <span class="contact-card__name">Instagram</span>
+                        <span class="contact-card__value">@grigoreva.brows</span>
+                    </span>
+                    <span class="contact-card__arrow">→</span>
+                </a>
+
+            </div>
+
+            <div class="contacts__bottom">
+
+                <div class="contact-address">
+                    <span class="contact-address__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/>
+                            <circle cx="12" cy="10" r="2.6"/>
+                        </svg>
+                    </span>
+
+                    <div class="contact-address__body">
+                        <span class="contact-address__label">Адрес студии</span>
+                        <p class="contact-address__text">
+                            г. Хабаровск,<br>
+                            ул. Шевчука, 42,<br>
+                            кабинет 503
+                        </p>
+
+                        <a href="https://yandex.ru/maps/?text=Хабаровск, Шевчука 42" target="_blank" rel="noopener" class="contact-address__map">
+                            Открыть на карте
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <span class="contact-info__label">О кабинете</span>
+
+                    <ul class="contact-info__list">
+                        <li>
+                            <strong>5 этаж</strong>
+                            <span>кабинет 503, лифт справа от входа</span>
+                        </li>
+                        <li>
+                            <strong>Стерильность</strong>
+                            <span>инструмент обрабатывается после каждой процедуры</span>
+                        </li>
+                        <li>
+                            <strong>Часы работы</strong>
+                            <span>ежедневно с 10:00 до 20:00, по записи</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="contacts__footer">
+                <button type="button" class="btn btn--accent contacts__btn" data-open-booking>Записаться</button>
+                <span class="contacts__note">Отвечаю в течение 15 минут</span>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- подвал -->
+<footer class="site-footer">
+    <div class="site-footer__inner">
+
+        <div class="site-footer__top">
+
+            <div class="site-footer__brand">
+                <span class="site-footer__logo">GRIGOREVA BROWS</span>
+                <p class="site-footer__slogan">Твои брови и ресницы — моя забота</p>
+            </div>
+
+            <nav class="site-footer__nav" aria-label="Меню в подвале">
+                <span class="site-footer__col-title">Разделы</span>
+                <ul class="site-footer__menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#education">Обучение</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer__contacts">
+                <span class="site-footer__col-title">Связаться</span>
+
+                <ul class="site-footer__list">
+                    <li>
+                        <a href="https://t.me/dishhpro" target="_blank" rel="noopener">Telegram · @dishhpro</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/grigoreva.brows" target="_blank" rel="noopener">Instagram · @grigoreva.brows</a>
+                    </li>
+                    <li>
+                        г. Хабаровск, ул. Шевчука, 42, каб. 503
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="site-footer__bottom">
+            <span>© 2026 Grigoreva Brows. Все права защищены.</span>
+            <span>Сделано с любовью к деталям</span>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- записаться (отдельное окно) -->
+<div class="booking" id="bookingModal" aria-hidden="true">
+    <div class="booking__backdrop" data-close-booking></div>
+
+    <div class="booking__dialog" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+
+        <button type="button" class="booking__close" data-close-booking aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <div class="booking__step" data-booking-step="form">
+            <span class="booking__label">Онлайн-запись</span>
+            <h3 class="booking__title" id="bookingTitle">Выберите дату и время</h3>
+            <p class="booking__sub">Свободные слоты обновляются автоматически</p>
+
+            <form class="booking__form" id="bookingForm" novalidate>
+
+                <!-- Услуга подставляется автоматически из квиза -->
+                <input type="hidden" name="service" id="bookingService" value="">
+
+                <label class="booking__field">
+                    <span class="booking__field-label">Ваше имя</span>
+                    <input type="text"
+                           name="name"
+                           id="bookingName"
+                           required
+                           placeholder="Как к вам обращаться?"
+                           autocomplete="name"
+                           maxlength="40">
+                    <span class="booking__error" data-error-for="name"></span>
+                </label>
+
+                <label class="booking__field">
+                    <span class="booking__field-label">Телефон</span>
+                    <input type="tel"
+                           name="phone"
+                           id="bookingPhone"
+                           required
+                           placeholder="+7 (___) ___-__-__"
+                           autocomplete="tel"
+                           inputmode="numeric"
+                           maxlength="18">
+                    <span class="booking__error" data-error-for="phone"></span>
+                </label>
+
+                <div class="booking__field">
+                    <span class="booking__field-label">Дата</span>
+
+                    <div class="booking__calendar" id="bookingCalendar">
+
+                        <div class="booking__calendar-weekdays">
+                            <span>Пн</span><span>Вт</span><span>Ср</span>
+                            <span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                        </div>
+
+                        <div class="booking__calendar-grid" id="bookingCalendarGrid"></div>
+
+                        <div class="booking__calendar-legend">
+                            <span class="booking__legend-item">
+                                <i class="booking__legend-swatch booking__legend-swatch--free"></i>
+                                Есть места
+                            </span>
+                            <span class="booking__legend-item">
+                                <i class="booking__legend-swatch booking__legend-swatch--available"></i>
+                                Счастливые часы −15%
+                            </span>
+                            <span class="booking__legend-item">
+                                <i class="booking__legend-swatch booking__legend-swatch--busy"></i>
+                                Мест нет
+                            </span>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="date" id="bookingDate" required>
+                    <span class="booking__error" data-error-for="date"></span>
+                </div>
+
+                <div class="booking__field">
+                    <span class="booking__field-label">Время</span>
+                    <div class="booking__slots" id="bookingSlots"></div>
+                    <span class="booking__error" data-error-for="time"></span>
+                </div>
+
+                <button type="submit" class="btn btn--accent booking__submit">Отправить заявку</button>
+            </form>
+        </div>
+
+        <div class="booking__step" data-booking-step="success" hidden>
+            <span class="booking__success-icon">✦</span>
+            <h3 class="booking__title">Заявка отправлена!</h3>
+            <p class="booking__sub">
+                Мастер свяжется с вами для подтверждения записи в ближайшее время.
+            </p>
+            <button type="button" class="btn btn--accent booking__submit" data-close-booking>Хорошо</button>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- купончик снизу -->
+<button type="button" class="promo-fab" id="promoFab" aria-label="Открыть купон на скидку">
+    <svg class="promo-fab__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20.5 13.5 12 22 2 12V2h10l8.5 8.5a2 2 0 0 1 0 3z"
+              stroke="currentColor" stroke-width="1.8"
+              stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/>
+        <path d="M14.5 9.5 9.5 14.5"
+              stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="10.2" cy="10.2" r="1.2"
+                stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="13.8" cy="13.8" r="1.2"
+                stroke="currentColor" stroke-width="1.4"/>
+    </svg>
+</button>
+
+<!-- сам купон -->
+<div class="promo" id="promoModal" aria-hidden="true">
+    <div class="promo__backdrop" data-close-promo></div>
+
+    <div class="promo__dialog" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+
+        <button type="button" class="promo__close" data-close-promo aria-label="Закрыть">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+
+        <div class="coupon">
+            <div class="coupon__left">
+                <span class="coupon__label">Скидка</span>
+                <strong class="coupon__value">20%</strong>
+                <span class="coupon__sub">на любую процедуру</span>
+            </div>
+
+            <div class="coupon__right">
+                <span class="coupon__label">Действует</span>
+                <strong class="coupon__value-sm">На первое посещение</strong>
+                <span class="coupon__sub">Просто назовите «Скидка 20%» при записи</span>
+            </div>
+        </div>
+
+        <p class="promo__hint">
+            Просто упомяните скидку при записи или покажите это окно мастеру
+        </p>
+    </div>
+</div>
+
+
+<!-- кнопка "вверх" -->
+<button type="button" class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+    </svg>
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
