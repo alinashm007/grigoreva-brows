@@ -2890,7 +2890,7 @@ p {
     .site-footer__logo { font-size: 1.125rem; }
     .site-footer__bottom { flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 24px; }
 
-    /* ==== МОДАЛКА ЗАПИСИ — ИСПРАВЛЕНО ==== */
+    /* ===== МОДАЛКА ЗАПИСИ — ИСПРАВЛЕНО ===== */
 
     .booking {
         padding: 0;
@@ -2909,10 +2909,22 @@ p {
 
     .booking__dialog::-webkit-scrollbar { width: 0; }
 
-    .booking__title { font-size: 1.25rem; }
-    .booking__sub   { font-size: 0.875rem; margin-bottom: 20px; }
+    /* Заголовок — влезает в ширину, не режется */
+    .booking__title {
+        font-size: 1.125rem;
+        line-height: 1.2;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        padding-right: 44px; /* отступ от кнопки закрытия */
+    }
 
-    /* Календарь — влезает в ширину */
+    .booking__sub {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        margin-bottom: 18px;
+    }
+
+    /* Календарь — точно влезает в ширину */
     .booking__calendar {
         padding: 8px 6px;
         border-radius: 12px;
@@ -2948,7 +2960,6 @@ p {
         line-height: 1;
     }
 
-    /* Прячем «занято» — не влезает и не нужно */
     .booking__day__status {
         display: none;
     }
@@ -2975,7 +2986,7 @@ p {
         border-radius: 3px;
     }
 
-    /* Слоты — 3 в ряд, крупные */
+    /* Слоты времени — 3 в ряд, крупные */
     .booking__slots {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
@@ -2987,7 +2998,7 @@ p {
         font-size: 0.8125rem;
     }
 
-    /* Поля — без авто-зума на iOS */
+    /* Поля ввода — без авто-зума на iOS */
     .booking__form input:not([type="hidden"]) {
         font-size: 16px;
         padding: 13px 14px;
@@ -2997,7 +3008,7 @@ p {
         width: 100%;
     }
 
-    /* ==== КОНЕЦ ИСПРАВЛЕНИЙ МОДАЛКИ ==== */
+    /* ===== КОНЕЦ ИСПРАВЛЕНИЙ МОДАЛКИ ===== */
 
     .promo-fab {
         right: 16px;
@@ -3068,6 +3079,18 @@ p {
     .site-decor__star--4 { font-size: 1.5rem; }
     .site-decor__star--5 { font-size: 1rem; }
     .site-decor__star--7 { font-size: 1.25rem; }
+}
+
+
+/* ====== СКРЫТИЕ КНОПОК ПРИ ОТКРЫТОЙ МОДАЛКЕ ====== */
+/* Работает, потому что script.js добавляет body класс is-locked */
+
+body.is-locked .to-top,
+body.is-locked .promo-fab {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(12px) !important;
 }
 
 
