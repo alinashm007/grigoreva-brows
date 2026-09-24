@@ -2696,6 +2696,77 @@ p {
 }
 
 
+@media (max-width: 1024px) {
+    .site-header__nav { display: none; }
+    .burger           { display: flex; }
+    .site-header__logo-text { font-size: 0.875rem; }
+}
+
+@media (max-width: 960px) {
+    .quiz { padding: 40px 20px 20px; }
+
+    .quiz__inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 36px 32px;
+        border-radius: 22px;
+    }
+
+    .quiz__side-decor { font-size: 3.5rem; bottom: -8px; }
+    .quiz__box { min-height: 380px; }
+
+    .hero { padding: 60px 24px 80px; }
+    .hero::before { inset: 24px 20px; border-radius: 20px; }
+    .hero__inner { grid-template-columns: 1fr; gap: 60px; }
+    .hero__card { padding: 18px 24px; margin-bottom: 24px; }
+    .hero__media { max-width: 300px; margin: 0 auto; }
+    .hero__circle { top: -8%; left: -15%; width: 85%; height: 85%; }
+    .hero__facts { gap: 24px; }
+
+    .services { padding: 80px 20px 100px; }
+    .slider { aspect-ratio: 4 / 3; border-radius: 16px; }
+    .slider__caption { padding: 24px 24px 22px; }
+    .slider__arrow { width: 42px; height: 42px; }
+    .slider__arrow--prev { left: 12px; }
+    .slider__arrow--next { right: 12px; }
+
+    .prices { padding: 80px 20px 100px; }
+    .prices__inner { padding: 48px 40px 40px; border-radius: 26px; }
+
+    .education { padding: 80px 20px 100px; }
+    .education__head { margin-bottom: 40px; }
+    .education__list { gap: 28px; }
+    .edu-item {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px;
+        border-radius: 22px;
+    }
+    .edu-item__media { border-radius: 18px; }
+
+    .contacts { padding: 80px 20px 100px; }
+    .contacts__inner { padding: 48px 40px 40px; border-radius: 26px; }
+    .contacts__head { margin-bottom: 36px; }
+
+    .contacts__bottom { grid-template-columns: 1fr; }
+
+    .site-footer { padding: 48px 20px 24px; }
+    .site-footer__top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .site-footer__brand { grid-column: 1 / -1; }
+
+    body::before { width: 380px; height: 380px; top: -60px; right: -100px; }
+    body::after  { width: 420px; height: 420px; bottom: 40px; left: -120px; }
+
+    .site-decor__star { opacity: .45; }
+    .site-decor__star--1 { font-size: 1.5rem; }
+    .site-decor__star--2 { font-size: 1.25rem; }
+    .site-decor__star--3 { font-size: 1rem; }
+    .site-decor__star--4 { font-size: 1.75rem; }
+    .site-decor__star--5 { font-size: 1.25rem; }
+    .site-decor__star--6 { font-size: 1.25rem; }
+    .site-decor__star--7 { font-size: 1.5rem; }
+    .site-decor__star--8 { font-size: 1rem; }
+}
 
 
 /* адаптив телефон*/
