@@ -257,7 +257,7 @@ body::after {
 }
 
 
-/* бургер-меню (для мобилки и тд) */
+/* бургер-меню */
 
 .burger {
     display: none;
@@ -288,7 +288,7 @@ body::after {
 .burger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 
-/* мобилка */
+/* мобильное меню */
 
 .mobile-menu {
     position: fixed;
@@ -372,7 +372,7 @@ body::after {
 .overlay.is-visible { opacity: 1; visibility: visible; }
 
 
-/* тест */
+/* тест (квиз) */
 
 .quiz {
     position: relative;
@@ -727,7 +727,7 @@ body::after {
 }
 
 
-/* блок знакомство с мастером */
+/* блок знакомства с мастером */
 
 .hero {
     position: relative;
@@ -1469,7 +1469,7 @@ body::after {
 .edu-item__price--new { color: var(--color-accent); }
 
 
-/* как связаться и тд */
+/* контакты */
 
 .contacts {
     position: relative;
@@ -1806,7 +1806,7 @@ p {
 }
 
 
-/* шапка при пролистывании  */
+/* шапка при пролистывании */
 
 .site-header.is-scrolled {
     background: rgba(255, 255, 255, .9);
@@ -1935,7 +1935,7 @@ p {
 }
 
 
-/* окно для записи (отдельное) */
+/* окно для записи */
 
 .booking {
     position: fixed;
@@ -2401,7 +2401,7 @@ p {
 }
 
 
-/*  кнопка "вверх" */
+/* кнопка "вверх" */
 
 .to-top {
     position: fixed;
@@ -2502,7 +2502,6 @@ p {
     background: transparent;
 }
 
-/* Базовый день*/
 .booking__day {
     position: relative;
 
@@ -2543,7 +2542,6 @@ p {
     line-height: 1;
 }
 
-/* Свободно (прозрачный) */
 .booking__day--free {
     background: transparent;
     border-color: var(--color-border);
@@ -2556,7 +2554,6 @@ p {
     box-shadow: 0 6px 14px rgba(255, 122, 178, .16);
 }
 
-/*  Есть места / счастливые часы (розовый) */
 .booking__day--available {
     background: var(--color-accent-soft);
     border-color: rgba(255, 122, 178, .45);
@@ -2575,7 +2572,6 @@ p {
     box-shadow: 0 6px 16px rgba(255, 122, 178, .25);
 }
 
-/*  Занято (серый)  */
 .booking__day--busy,
 .booking__day--off {
     background: #e9e9e9;
@@ -2597,7 +2593,6 @@ p {
     box-shadow: none;
 }
 
-/*  Выбранный день  */
 .booking__day.is-selected {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(255, 122, 178, .3);
@@ -2627,7 +2622,6 @@ p {
     cursor: not-allowed;
 }
 
-/*  Легенда  */
 .booking__calendar-legend {
     display: flex;
     flex-wrap: wrap;
@@ -2671,7 +2665,6 @@ p {
     background: #e9e9e9;
 }
 
-/*Слоты со скидкой  */
 .booking__slot--happy {
     position: relative;
     background: #fff5f9;
@@ -2702,41 +2695,8 @@ p {
     color: var(--color-accent);
 }
 
-/*  Адаптив */
-@media (max-width: 640px) {
-    .booking__calendar {
-        padding: 10px;
-        border-radius: 14px;
-    }
 
-    .booking__calendar-grid,
-    .booking__calendar-weekdays {
-        gap: 4px;
-    }
-
-    .booking__day {
-        border-radius: 8px;
-    }
-
-    .booking__day__num {
-        font-size: 0.75rem;
-    }
-
-    .booking__day__status {
-        font-size: 0.5rem;
-    }
-
-    .booking__calendar-legend {
-        gap: 6px 10px;
-    }
-
-    .booking__legend-item {
-        font-size: 0.625rem;
-    }
-}
-
-
-/* адпативность */
+/* адаптив: планшеты */
 
 @media (max-width: 1024px) {
     .site-header__nav { display: none; }
@@ -2809,6 +2769,9 @@ p {
     .site-decor__star--7 { font-size: 1.5rem; }
     .site-decor__star--8 { font-size: 1rem; }
 }
+
+
+/* адаптив: телефоны */
 
 @media (max-width: 640px) {
     .site-header__inner { padding: 0 16px; gap: 12px; }
@@ -2927,11 +2890,114 @@ p {
     .site-footer__logo { font-size: 1.125rem; }
     .site-footer__bottom { flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 24px; }
 
-    .booking { padding: 16px; }
-    .booking__dialog { padding: 32px 22px 24px; border-radius: 22px; }
+    /* ==== МОДАЛКА ЗАПИСИ — ИСПРАВЛЕНО ==== */
+
+    .booking {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .booking__dialog {
+        width: 100%;
+        max-width: 100%;
+        max-height: 92dvh;
+        padding: 28px 16px 20px;
+        border-radius: 24px 24px 0 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .booking__dialog::-webkit-scrollbar { width: 0; }
+
     .booking__title { font-size: 1.25rem; }
-    .booking__slots { grid-template-columns: repeat(3, 1fr); }
-    .booking__slot { padding: 10px 6px; font-size: 0.8125rem; }
+    .booking__sub   { font-size: 0.875rem; margin-bottom: 20px; }
+
+    /* Календарь — влезает в ширину */
+    .booking__calendar {
+        padding: 8px 6px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .booking__calendar-weekdays,
+    .booking__calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 3px;
+        width: 100%;
+    }
+
+    .booking__calendar-weekdays span {
+        font-size: 0.5625rem;
+        letter-spacing: .06em;
+    }
+
+    .booking__day {
+        min-width: 0;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        min-height: 34px;
+        padding: 0;
+        border-radius: 8px;
+        border-width: 1.5px;
+        gap: 0;
+    }
+
+    .booking__day__num {
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    /* Прячем «занято» — не влезает и не нужно */
+    .booking__day__status {
+        display: none;
+    }
+
+    .booking__calendar-empty {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .booking__calendar-legend {
+        gap: 4px 10px;
+        padding-top: 8px;
+        margin-top: 8px;
+    }
+
+    .booking__legend-item {
+        font-size: 0.5625rem;
+        gap: 4px;
+    }
+
+    .booking__legend-swatch {
+        width: 11px;
+        height: 11px;
+        border-radius: 3px;
+    }
+
+    /* Слоты — 3 в ряд, крупные */
+    .booking__slots {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .booking__slot {
+        padding: 12px 4px;
+        min-height: 42px;
+        font-size: 0.8125rem;
+    }
+
+    /* Поля — без авто-зума на iOS */
+    .booking__form input:not([type="hidden"]) {
+        font-size: 16px;
+        padding: 13px 14px;
+    }
+
+    .booking__submit {
+        width: 100%;
+    }
+
+    /* ==== КОНЕЦ ИСПРАВЛЕНИЙ МОДАЛКИ ==== */
 
     .promo-fab {
         right: 16px;
@@ -3005,7 +3071,7 @@ p {
 }
 
 
-/* плавное появление при пролистывании (скролле) */
+/* плавное появление при скролле */
 
 .reveal {
     opacity: 0;
