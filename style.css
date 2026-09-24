@@ -2696,12 +2696,19 @@ p {
 }
 
 
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+
+
+/* Планшеты и узкие ноутбуки */
 @media (max-width: 1024px) {
     .site-header__nav { display: none; }
     .burger           { display: flex; }
     .site-header__logo-text { font-size: 0.875rem; }
 }
 
+/* Планшеты вертикально */
 @media (max-width: 960px) {
     .quiz { padding: 40px 20px 20px; }
 
@@ -2768,9 +2775,7 @@ p {
     .site-decor__star--8 { font-size: 1rem; }
 }
 
-
-/* адаптив телефон*/
-
+/* Телефоны */
 @media (max-width: 640px) {
     .site-header__inner { padding: 0 16px; gap: 12px; }
     .site-header__logo { max-width: 140px; }
@@ -2888,7 +2893,7 @@ p {
     .site-footer__logo { font-size: 1.125rem; }
     .site-footer__bottom { flex-direction: column; align-items: flex-start; gap: 8px; padding-top: 24px; }
 
-    /* модалка */
+    /* ==== МОДАЛКА ЗАПИСИ ==== */
 
     .booking {
         padding: 0;
@@ -2898,6 +2903,7 @@ p {
     .booking__dialog {
         width: 100%;
         max-width: 100%;
+        max-height: 92vh;
         max-height: 92dvh;
         padding: 28px 16px 20px;
         border-radius: 24px 24px 0 0;
@@ -2907,13 +2913,12 @@ p {
 
     .booking__dialog::-webkit-scrollbar { width: 0; }
 
-  
     .booking__title {
         font-size: 1.125rem;
         line-height: 1.2;
         word-break: break-word;
         overflow-wrap: anywhere;
-        padding-right: 44px; 
+        padding-right: 44px;
     }
 
     .booking__sub {
@@ -2922,7 +2927,6 @@ p {
         margin-bottom: 18px;
     }
 
-    
     .booking__calendar {
         padding: 8px 6px;
         border-radius: 12px;
@@ -2984,7 +2988,6 @@ p {
         border-radius: 3px;
     }
 
-    
     .booking__slots {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 8px;
@@ -2996,7 +2999,6 @@ p {
         font-size: 0.8125rem;
     }
 
-  
     .booking__form input:not([type="hidden"]) {
         font-size: 16px;
         padding: 13px 14px;
@@ -3006,11 +3008,11 @@ p {
         width: 100%;
     }
 
+    /* ==== КОНЕЦ МОДАЛКИ ==== */
 
     .promo-fab {
         right: 16px;
         bottom: 16px;
-
         width: 56px;
         height: 56px;
     }
@@ -3054,7 +3056,6 @@ p {
     .to-top {
         right: 16px;
         bottom: 88px;
-
         width: 46px;
         height: 46px;
     }
@@ -3079,18 +3080,21 @@ p {
 }
 
 
-
+/* ============================================================
+   СКРЫТИЕ ПЛАВАЮЩИХ КНОПОК ПРИ ОТКРЫТОЙ МОДАЛКЕ
+   ============================================================ */
 
 body.is-locked .to-top,
 body.is-locked .promo-fab {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    transform: translateY(12px) !important;
 }
 
 
-/* плавное появление при скролле */
+/* ============================================================
+   ПЛАВНОЕ ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ
+   ============================================================ */
 
 .reveal {
     opacity: 0;
